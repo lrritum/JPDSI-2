@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="/templates/page-template.xhtml">
+
+	<ui:define name="pageContent">
+
+		<h:messages id="msg" />
+
+		<h:form>
+			<h:panelGrid columns="2" cellpadding="5" styleClass="bottom-space">
+				<h:outputLabel for="idx" value="x:" />
+				<h:inputText id="idx" value="#{calcBB.x}" />
+
+				<h:outputLabel for="idy" value="y:" />
+				<h:inputText id="idy" value="#{calcBB.y}" />
+
+				<h:commandButton value="Dodaj" action="#{calcBB.calc()}"/>
+			</h:panelGrid>
+			<h:commandLink value="Informacje" action="#{calcBB.info()}" />
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>
+</html>
